@@ -10,22 +10,94 @@ section {
   padding:100px 20px;
   text-align:center;
 }
+/* ===== hero 디자인 업그레이드 ===== */
 .hero {
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#e8dcd0,#f8f6f4);
+  height:auto;
+  padding:60px 20px;
+  background:#f8f6f4;
+  position:relative;
 }
 .hero h1 {
   font-family:'Playfair Display';
   font-size:48px;
   margin-bottom:20px;
 }
-.hero p {
-  font-size:18px;
-  opacity:0.8;
+
+/* SAVE 세로 텍스트 */
+.save {
+  position:absolute;
+  right:15px;
+  top:72px;
+  writing-mode: vertical-rl;
+  font-family:'Playfair Display';
+  letter-spacing:4px;
+  font-size:14px;
+  opacity:0.6;
+  font-weight: 500;
+}
+
+/* 날짜 */
+.date {
+  font-family:'Playfair Display';
+  font-size:48px;
+  margin-bottom:40px;
+}
+
+/* 슬라이드 */
+.slider {
+  position:relative;
+  max-width:420px;
+  margin:auto;
+  border-radius:20px;
+  overflow:hidden;
+  height:430px; 
+}
+
+.slide {
+  position:absolute;
+  width:100%;
+  opacity:0;
+  transition:opacity 1.2s ease;
+}
+
+.slide.active {
+  opacity:1;
+  position:relative;
+}
+
+.slide img {
+  width:100%;
+  display:block;
+    height:100%;
+  object-fit:cover;
+}
+
+#msg {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  padding: 0 10px;
+  white-space: pre-line;
+}
+/* 이름 */
+.names {
+  margin-top:40px;
+  font-family:'Playfair Display';
+  font-size:28px;
+}
+
+/* 세로 라인 */
+.line {
+  width:1px;
+  height:50px;
+  background:#999;
+  margin:20px auto;
+}
+
+/* 서브텍스트 */
+.sub {
+  font-size:16px;
+  opacity:0.7;
 }
 .fade-up {
   opacity:0;
