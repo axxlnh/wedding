@@ -62,7 +62,6 @@ section {
 
 .slide.active {
   opacity:1;
-  position:relative;
 }
 
 .slide img {
