@@ -1,0 +1,84 @@
+
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background:#f8f6f4;
+  color:#333;
+  overflow-x:hidden;
+}
+section {
+  padding:100px 20px;
+  text-align:center;
+}
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#e8dcd0,#f8f6f4);
+}
+.hero h1 {
+  font-family:'Playfair Display';
+  font-size:48px;
+  margin-bottom:20px;
+}
+.hero p {
+  font-size:18px;
+  opacity:0.8;
+}
+.fade-up {
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
+}
+.fade-up.active {
+  opacity:1;
+  transform:translateY(0);
+}
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  max-width:1000px;
+  margin:auto;
+}
+.gallery img {
+  width:100%;
+  border-radius:15px;
+  transition:transform 0.4s ease;
+}
+.gallery img:hover {
+  transform:scale(1.05);
+}
+.message-box {
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+button {
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:#c6a989;
+  color:white;
+  cursor:pointer;
+  margin-top:20px;
+}
+button:hover {
+  background:#b89672;
+}
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events:none;
+}
+@media only screen and (max-width: 600px) {
+.hero h1 {
+  font-size:30px;
+}
+}
